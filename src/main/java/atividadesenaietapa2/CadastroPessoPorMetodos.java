@@ -6,16 +6,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class CadastroPesso2 {
+public class CadastroPessoPorMetodos {
     private Scanner opcaoMenu;
     private boolean execute;
     private List<Pessoa> dadosPessoa;
 
     public static void main(String[] args) {
-        new CadastroPesso2();
+        new CadastroPessoPorMetodos();
     }
 
-    private CadastroPesso2() {
+    private CadastroPessoPorMetodos() {
         opcaoMenu = new Scanner(System.in);
         execute = true;
         dadosPessoa = new ArrayList<Pessoa>();
