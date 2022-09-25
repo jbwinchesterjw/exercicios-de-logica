@@ -1,0 +1,25 @@
+
+N	java:S1066"9Replace this use of System.out or System.err by a logger.(ô”£·
+M	java:S106>"9Replace this use of System.out or System.err by a logger.(ÊâÎ{
+N	java:S106?"9Replace this use of System.out or System.err by a logger.(İ‡€Ï
+N	java:S106@"9Replace this use of System.out or System.err by a logger.(®âù©
+N	java:S106C"9Replace this use of System.out or System.err by a logger.(…àñó
+S	java:S106T"9Replace this use of System.out or System.err by a logger.(®®×Óùÿÿÿÿ
+S	java:S106W"9Replace this use of System.out or System.err by a logger.(èÇÇûÿÿÿÿ
+c	java:S100\"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê”ÈÙ
+N	java:S106_"9Replace this use of System.out or System.err by a logger.(‹šŞ
+N	java:S106`"9Replace this use of System.out or System.err by a logger.(Ì¯©è
+S	java:S106a"9Replace this use of System.out or System.err by a logger.( ÉÅ‡üÿÿÿÿ
+S	java:S106b"9Replace this use of System.out or System.err by a logger.(÷Ü£ÿÿÿÿÿ
+S	java:S106d"9Replace this use of System.out or System.err by a logger.(ØÄ€Ûøÿÿÿÿ
+S	java:S106f"9Replace this use of System.out or System.err by a logger.(×¸âúÿÿÿÿ
+N	java:S106g"9Replace this use of System.out or System.err by a logger.(Äà©Ê
+S	java:S106l"9Replace this use of System.out or System.err by a logger.(å¨øışÿÿÿÿ
+S	java:S106n"9Replace this use of System.out or System.err by a logger.(ĞÉî©úÿÿÿÿ
+S	java:S106o"9Replace this use of System.out or System.err by a logger.(Ôšñ úÿÿÿÿ
+S	java:S106p"9Replace this use of System.out or System.err by a logger.(í¥Æ…ıÿÿÿÿ
+N	java:S106q"9Replace this use of System.out or System.err by a logger.(œ¼Ê¨
+M	java:S106r"9Replace this use of System.out or System.err by a logger.(ÄÒ»
+N	java:S106s"9Replace this use of System.out or System.err by a logger.(Á´½À
+J
+java:S1128"4Remove this unused import 'java.text.DecimalFormat'.(¤°Ó˜
