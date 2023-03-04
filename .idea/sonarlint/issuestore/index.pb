@@ -29,5 +29,3 @@ Y
 )src/main/java/MediaNumerosMediaMedia.java,d\d\dd372cff0bc8b1f84c1780e008ad40a24d0e51b0
 Y
 )src/main/java/VetorPreechidoOrdenado.java,1\5\15d1c83d0837cc28f988769f6325e7f09f65c937
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
