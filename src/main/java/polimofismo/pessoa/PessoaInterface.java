@@ -18,4 +18,6 @@ public interface PessoaInterface {
     List<Pessoa> listarProfessores();
 
     List<Pessoa> listarAlunos();
+
+    void verificarEmail(String email);
 }

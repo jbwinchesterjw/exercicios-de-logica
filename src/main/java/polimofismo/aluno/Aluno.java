@@ -20,7 +20,7 @@ public class Aluno extends Pessoa {
     }
 
     public Aluno(String nome, String email, LocalDate dataNascimento) {
-        super(email, nome, dataNascimento);
+        super( nome, email, dataNascimento);
     }
 
     private static List<Aluno> listaDeAlunos = new ArrayList<>();

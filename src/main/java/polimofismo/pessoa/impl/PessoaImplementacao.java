@@ -2,6 +2,8 @@ package polimofismo.pessoa.impl;
 
 
 import polimofismo.aluno.Aluno;
+import polimofismo.curso.Curso;
+import polimofismo.curso.repository.CursoRepository;
 import polimofismo.pessoa.Pessoa;
 import polimofismo.pessoa.PessoaInterface;
 import polimofismo.pessoa.repository.PessoaRepository;
@@ -15,11 +17,13 @@ import java.util.ListIterator;
 public class PessoaImplementacao implements PessoaInterface {
 
     PessoaRepository pessoaRepository = new PessoaRepository();
+    CursoRepository cursoRepository = new CursoRepository();
 
 
     @Override
     public void cadastrarPessoa(Pessoa pessoa) {
         pessoaRepository.cadastraPessoaRepositorio(pessoa);
+        System.out.println("======================\u001B[32mProfessor Cadastrado com sucesso!\u001B[0m======================");
     }
 
     @Override
@@ -42,18 +46,18 @@ public class PessoaImplementacao implements PessoaInterface {
     @Override
     public void excluirPessoa(int codigo) {
         List<Pessoa> pessoaList = pessoaRepository.listarPessoaRepositorio();
-        ListIterator<Pessoa> iterator = pessoaList.listIterator(pessoaList.size());
+        List<Curso> cursoList = cursoRepository.listarCursosRepositorio();
 
-        while (iterator.hasPrevious()) {
-            Pessoa pessoa = iterator.previous();
-            if (pessoa.getCodigo() == codigo) {
-                iterator.remove();
-                System.out.println("======================\u001B[32mPessoa excluída com sucesso!\u001B[0m======================");
-                return;
-            }
+        boolean pessoaAssociadaACurso = cursoList.stream()
+                .anyMatch(curso -> curso.getPessoaList().stream()
+                        .anyMatch(pessoa -> pessoa.getCodigo() == codigo));
+
+        if (!pessoaAssociadaACurso) {
+            pessoaList.removeIf(pessoa -> pessoa.getCodigo() == codigo);
+            System.out.println("======================\u001B[32mPessoa excluída com sucesso!\u001B[0m======================");
+        } else {
+            System.out.println("======================\u001B[31mA pessoa está associada a um curso. Não pode ser excluída!\u001B[0m======================");
         }
-
-        System.out.println("======================\u001B[31mPessoa não encontrada!\u001B[0m======================");
     }
 
     @Override
@@ -112,7 +116,6 @@ public class PessoaImplementacao implements PessoaInterface {
         return professorList;
     }
 
-
     @Override
     public Boolean buscarPessoaPorCadigo(int codigo) {
         List<Pessoa> pessoaList = pessoaRepository.listarPessoaRepositorio();
@@ -122,5 +125,14 @@ public class PessoaImplementacao implements PessoaInterface {
             }
         }
         return false;
+    }
+
+    public void verificarEmail(String email) {
+        List<Pessoa> pessoaList = pessoaRepository.listarPessoaRepositorio();
+        for (Pessoa pessoa : pessoaList) {
+            if (pessoa.getEmail().equals(email)) {
+                System.out.println("Já existe uma pessoa com o email informado!");
+            }
+        }
     }
 }
