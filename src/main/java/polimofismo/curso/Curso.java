@@ -7,11 +7,9 @@ import java.util.List;
 
 public class Curso {
     private static int codigoGerado = 1;
-
     private int codigo;
     private String nome;
     private int totalAlunos;
-
     private List<Pessoa> pessoaList;
 
     public Curso(String nome, int totalAlunos, List<Pessoa> pessoaList) {

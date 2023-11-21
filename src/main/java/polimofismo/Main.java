@@ -20,18 +20,18 @@ import java.util.logging.Logger;
 public class Main {
 
     static Logger logger = Logger.getLogger(Main.class.getName());
-    static PessoaInterface pessoaInterface = (PessoaInterface) new PessoaImplementacao();
+    static PessoaInterface pessoaInterface = new PessoaImplementacao();
 
     static CursoInterface cursoInterface = new CursoImplementacao();
 
     static Scanner input = new Scanner(System.in);
+    static int opcao = 0;
 
     public static void main(String[] args) {
         menuPrincipal();
     }
 
     private static void menuPrincipal() {
-        int opcao = 0;
         while (opcao != 4) {
             System.out.println("Gerenciamento de alunos e professores qual deseja cadastrar? \n1 - Aluno \n2 - Professor\n3 - Curso");
             opcao = input.nextInt();
@@ -54,7 +54,6 @@ public class Main {
     }
 
     private static void gerenciarAlunos() {
-        int opcao = 0;
         while (opcao != 6) {
 
             System.out.println("Menu Gerenciar alunos\n1 - Cadastro \n2 - Atualizar\n3 - Excluir\n4 - Listar\n5 - Volata ao menu principal");
@@ -87,14 +86,10 @@ public class Main {
     }
 
     public static void cadastroDeAlunos() {
-        Pessoa alunoPessoa = new Aluno("jb@", "Joao", LocalDate.now());
-        Pessoa alunoPessoa1 = new Aluno("jack@", "Jack Winchester", LocalDate.now());
-        Pessoa alunoPessoa2 = new Aluno("jW@", "Jb Winchester", LocalDate.now());
+        Pessoa alunoPessoa = new Aluno("Joao", "Joao@", LocalDate.now());
 
+        pessoaInterface.verificarEmail(alunoPessoa.getEmail());
         pessoaInterface.cadastrarPessoa(alunoPessoa);
-        pessoaInterface.cadastrarPessoa(alunoPessoa1);
-        pessoaInterface.cadastrarPessoa(alunoPessoa2);
-        System.out.println("======================\u001B[32mAluno Cadastrado com sucesso!\u001B[0m======================");
     }
 
     public static void atualizarAluno() {
@@ -103,7 +98,7 @@ public class Main {
         int codigoAluno = input.nextInt();
         Boolean alunoEncontradoPorCodigo = pessoaInterface.buscarPessoaPorCadigo(codigoAluno);
         if (alunoEncontradoPorCodigo.equals(Boolean.TRUE)) {
-            Pessoa atualizarInformacoesAluno = new Aluno("Fulana Atualizado", "fulano@", LocalDate.now().minusMonths(6));
+            Pessoa atualizarInformacoesAluno = new Aluno("Fulano Atualizado", "fulano@", LocalDate.now().minusMonths(6));
             pessoaInterface.atualizarPessoa(codigoAluno, atualizarInformacoesAluno.getNome(),
                     atualizarInformacoesAluno.getEmail(),//
                     atualizarInformacoesAluno.getDatanascimento());
@@ -126,7 +121,6 @@ public class Main {
 
 
     public static void gerenciarProfessores() {
-        int opcao = 0;
         while (opcao != 6) {
             System.out.println("Menu gerenciar professor!\n1 - Cadastrar\n2 - Atualizar\n3 - Excluir\n4 - Listar\n5 - Menu principal");
             try {
@@ -158,7 +152,6 @@ public class Main {
     private static void castrarProfessor() {
         Pessoa professor = new Professor("Professor zica", "zica@", LocalDate.now());
         pessoaInterface.cadastrarPessoa(professor);
-        System.out.println("======================\u001B[32mProfessor Cadastrado com sucesso!\u001B[0m======================");
     }
 
     private static void atualizarProfessor() {
@@ -190,9 +183,8 @@ public class Main {
 
 
     private static void gerenciarCursos() {
-        int opcao = 0;
         while (opcao != 5) {
-            System.out.println("\n1 - Cadastrar\n2 - Atualizar\n3 - Excluir\n4 - Listar");
+            System.out.println("Gerenciamento de curso\n1 - Cadastrar\n2 - Atualizar\n3 - Excluir\n4 - Listar");
             opcao = input.nextInt();
             switch (opcao) {
                 case 1:
@@ -208,12 +200,41 @@ public class Main {
                     listarCurso();
                     break;
                 case 5:
+                    vincularPessoasAoCurso();
+                    break;
+                case 6:
                     menuPrincipal();
                     break;
                 default:
                     logger.info("A opção digitada e invalida!");
             }
         }
+    }
+
+    private static void vincularPessoasAoCurso() {
+        while (opcao != 3){
+            System.out.println("O que deseja fazer?\n1 - Vincular aluno ao curso\n2 - vincular professor ao curso");
+            switch (opcao){
+                case 1:
+                    vincularAluno();
+                    break;
+                case 2:
+                    vincularPreofessor();
+                    break;
+                case 3:
+                    gerenciarCursos();
+                    break;
+                default:
+                    logger.info("A opção digitada e invalida!");
+            }
+            
+        }
+    }
+
+    private static void vincularAluno() {
+    }
+
+    private static void vincularPreofessor() {
     }
 
     private static void casdastrarCurso() {

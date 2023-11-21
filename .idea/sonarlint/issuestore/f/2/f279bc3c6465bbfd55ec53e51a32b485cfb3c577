@@ -1,0 +1,24 @@
+
+¤
+java:S1186ê"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(µ€™Áúÿÿÿÿ8ğè¢¿1
+¤
+java:S1186í"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÿ‰çáÿÿÿÿÿ8ğè¢¿1
+L	java:S106$"+Replace this use of System.out by a logger.(­Ôà”øÿÿÿÿ8İ×‹¢¿1
+L	java:S106;"+Replace this use of System.out by a logger.(ë‡£íúÿÿÿÿ8Ş×‹¢¿1
+G	java:S106a"+Replace this use of System.out by a logger.(áƒüœ8Ş×‹¢¿1
+G	java:S106j"+Replace this use of System.out by a logger.(“·ı’8ùè¢¿1
+L	java:S106o"+Replace this use of System.out by a logger.(€°Ã®øÿÿÿÿ8ùè¢¿1
+F	java:S106u"+Replace this use of System.out by a logger.(Ã¡V8úè¢¿1
+G	java:S106w"+Replace this use of System.out by a logger.(¯±õ8úè¢¿1
+F	java:S106}"+Replace this use of System.out by a logger.(¡Ê™8úè¢¿1
+n	java:S128"LEnd this switch case with an unconditional break, return or throw statement.(ÌÊëÎüÿÿÿÿ8ûè¢¿1
+H	java:S106 "+Replace this use of System.out by a logger.(Ê Õ’8üè¢¿1
+H	java:S106¥"+Replace this use of System.out by a logger.(¶¢‘8ıè¢¿1
+M	java:S106­"+Replace this use of System.out by a logger.(ªë £ıÿÿÿÿ8ıè¢¿1
+M	java:S106³"+Replace this use of System.out by a logger.(ÉÇ¡’ıÿÿÿÿ8şè¢¿1
+H	java:S106µ"+Replace this use of System.out by a logger.(áÿí™8şè¢¿1
+M	java:S106»"+Replace this use of System.out by a logger.(è®š¿úÿÿÿÿ8şè¢¿1
+M	java:S106Ø"+Replace this use of System.out by a logger.(´Ëœúÿÿÿÿ8€é¢¿1
+M	java:S106÷"+Replace this use of System.out by a logger.(¿ùÜ¢şÿÿÿÿ8é¢¿1
+M	java:S106€"+Replace this use of System.out by a logger.(Ê®Í¯ùÿÿÿÿ8‚é¢¿1
+M	java:S106†"+Replace this use of System.out by a logger.(ëÈôíûÿÿÿÿ8‚é¢¿1
