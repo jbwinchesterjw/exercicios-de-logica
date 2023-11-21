@@ -29,6 +29,12 @@ Y
 )src/main/java/MediaNumerosMediaMedia.java,d\d\dd372cff0bc8b1f84c1780e008ad40a24d0e51b0
 Y
 )src/main/java/VetorPreechidoOrdenado.java,1\5\15d1c83d0837cc28f988769f6325e7f09f65c937
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+J
+ExerciciosDeLogicaJava.iml,d\0\d0d56e9e32efe6711b5c2830fbd10b60944065ac
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 N
