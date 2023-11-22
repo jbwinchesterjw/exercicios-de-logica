@@ -34,28 +34,31 @@ public class Main {
     private static void menuPrincipal() {
         while (opcao != 4) {
             System.out.println("Gerenciamento de alunos e professores qual deseja cadastrar? \n1 - Aluno \n2 - Professor\n3 - Curso");
-            opcao = input.nextInt();
-            switch (opcao) {
-                case 1:
-                    gerenciarAlunos();
-                    break;
-                case 2:
-                    gerenciarProfessores();
-                    break;
-                case 3:
-                    gerenciarCursos();
-                    break;
-                case 4:
-                    break;
-                default:
-                    logger.info("A Opção digitada e invalida!");
+            try {
+                opcao = input.nextInt();
+                switch (opcao) {
+                    case 1:
+                        gerenciarAlunos();
+                        break;
+                    case 2:
+                        gerenciarProfessores();
+                        break;
+                    case 3:
+                        gerenciarCursos();
+                        break;
+                    case 4:
+                        break;
+                    default:
+                        logger.info("A Opção digitada e invalida!");
+                }
+            } catch (InputMismatchException exception) {
+                logger.info("Atenção informe apenas números!");
             }
         }
     }
 
     private static void gerenciarAlunos() {
         while (opcao != 6) {
-
             System.out.println("Menu Gerenciar alunos\n1 - Cadastro \n2 - Atualizar\n3 - Excluir\n4 - Listar\n5 - Volata ao menu principal");
             try {
                 opcao = input.nextInt();
@@ -87,7 +90,6 @@ public class Main {
 
     public static void cadastroDeAlunos() {
         Pessoa alunoPessoa = new Aluno("Joao", "Joao@", LocalDate.now());
-
         pessoaInterface.verificarEmail(alunoPessoa.getEmail());
         pessoaInterface.cadastrarPessoa(alunoPessoa);
     }
@@ -144,7 +146,7 @@ public class Main {
                         logger.info("Opção invalida!");
                 }
             } catch (InputMismatchException exception) {
-                logger.info("Atenção digite apenas numeros!");
+                logger.info("Atenção digite apenas números!");
             }
         }
     }
@@ -185,25 +187,29 @@ public class Main {
     private static void gerenciarCursos() {
         while (opcao != 5) {
             System.out.println("Gerenciamento de curso\n1 - Cadastrar\n2 - Atualizar\n3 - Excluir\n4 - Listar\n5 - Vincular aluno ou professor ao curso\n6 - Menu principal");
-            opcao = input.nextInt();
-            switch (opcao) {
-                case 1:
-                    casdastrarCurso();
-                    break;
-                case 2:
-                    atualizarCurso();
-                    break;
-                case 3:
-                    excluirCurso();
-                    break;
-                case 4:
-                    listarCurso();
-                    break;
-                case 5:
-                    menuPrincipal();
-                    break;
-                default:
-                    logger.info("A opção digitada e invalida!");
+            try {
+                opcao = input.nextInt();
+                switch (opcao) {
+                    case 1:
+                        casdastrarCurso();
+                        break;
+                    case 2:
+                        atualizarCurso();
+                        break;
+                    case 3:
+                        excluirCurso();
+                        break;
+                    case 4:
+                        listarCurso();
+                        break;
+                    case 5:
+                        menuPrincipal();
+                        break;
+                    default:
+                        logger.info("A opção digitada e invalida!");
+                }
+            } catch (InputMismatchException exception) {
+                logger.info("Atenção digite apenas números!");
             }
         }
     }
@@ -211,20 +217,24 @@ public class Main {
     private static void vincularPessoasAoCurso() {
         while (opcao != 3) {
             System.out.println("O que deseja fazer?\n1 - Vincular aluno ao curso\n2 - vincular professor ao curso");
-            switch (opcao) {
-                case 1:
-                    vincularAluno();
-                    break;
-                case 2:
-                    vincularPreofessor();
-                    break;
-                case 3:
-                    gerenciarCursos();
-                    break;
-                default:
-                    logger.info("A opção digitada e invalida!");
-            }
+            try {
+                switch (opcao) {
+                    case 1:
+                        vincularAluno();
+                        break;
+                    case 2:
+                        vincularPreofessor();
+                        break;
+                    case 3:
+                        gerenciarCursos();
+                        break;
+                    default:
+                        logger.info("A opção digitada e invalida!");
+                }
 
+            } catch (InputMismatchException exception) {
+                logger.info("Atenção digite apenas números!");
+            }
         }
     }
 
@@ -261,19 +271,24 @@ public class Main {
 
         while (opcao != 3) {
             System.out.println("Deseja adicionar algum aluno ou porfessor a esse curso ? \n1 - Sim\n2 - Não");
-            opcao = input.nextInt();
-            switch (opcao) {
-                case 1:
-                    vincularAluno();
+            try {
+                opcao = input.nextInt();
+                switch (opcao) {
+                    case 1:
+                        vincularAluno();
 
-                    break;
-                case 2:
-                    gerenciarCursos();
-                    break;
-                case 3:
-                    logger.info("A opção digitada invalida!");
-                    break;
-                default:
+                        break;
+                    case 2:
+                        gerenciarCursos();
+                        break;
+                    case 3:
+                        logger.info("A opção digitada invalida!");
+                        break;
+                    default:
+                }
+
+            } catch (InputMismatchException exception) {
+                logger.info("Atenção digite apenas números!");
             }
 
         }

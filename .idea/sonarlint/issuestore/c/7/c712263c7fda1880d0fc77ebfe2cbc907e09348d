@@ -1,4 +1,7 @@
 
+j
+java:S1192F"HDefine a constant instead of duplicating this literal "
+Nome: " 3 times.(ë‡¾ÿÿÿÿÿ8ëå¢¿1
 g
 java:S1192G"JDefine a constant instead of duplicating this literal "
 E-mail: " 3 times.(·ªıƒ8êå¢¿1
@@ -10,9 +13,6 @@ Data Nascimento: " 3 times.(ó©ãŸ8ëå¢¿1
 j
 java:S1192I"MDefine a constant instead of duplicating this literal "
 EndereÃ§o: " 3 times.(å¸ÃŠ8ëå¢¿1
-j
-java:S1192F"HDefine a constant instead of duplicating this literal "
-Nome: " 3 times.(ë‡¾ÿÿÿÿÿ8ëå¢¿1
 L	java:S106"+Replace this use of System.out by a logger.(ëéƒÁûÿÿÿÿ8ûå¢¿1
 G	java:S106&"+Replace this use of System.out by a logger.(À£ÀØ8üå¢¿1
 L	java:S106+"+Replace this use of System.out by a logger.(¹êÇ şÿÿÿÿ8üå¢¿1
