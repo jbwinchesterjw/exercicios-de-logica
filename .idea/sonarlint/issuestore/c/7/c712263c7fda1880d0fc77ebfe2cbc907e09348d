@@ -13,7 +13,7 @@ EndereÃ§o: " 3 times.(å¸ÃŠ8ëå¢¿1
 j
 java:S1192F"HDefine a constant instead of duplicating this literal "
 Nome: " 3 times.(ë‡¾ÿÿÿÿÿ8ëå¢¿1
-L	java:S106"+Replace this use of System.out by a logger.(¥¬ÕÁúÿÿÿÿ8ûå¢¿1
+L	java:S106"+Replace this use of System.out by a logger.(ëéƒÁûÿÿÿÿ8ûå¢¿1
 G	java:S106&"+Replace this use of System.out by a logger.(À£ÀØ8üå¢¿1
 L	java:S106+"+Replace this use of System.out by a logger.(¹êÇ şÿÿÿÿ8üå¢¿1
 G	java:S1069"+Replace this use of System.out by a logger.(ÙŠ¶‘8şå¢¿1

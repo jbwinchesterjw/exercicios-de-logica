@@ -16,4 +16,6 @@ public interface CursoInterface {
     void listarCurso();
 
     Boolean buscarCursoPorCodigo(int codigo);
+
+    void vincularPessoasAoCurso(int codigoAluno);
 }

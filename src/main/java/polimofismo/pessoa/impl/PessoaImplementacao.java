@@ -23,7 +23,7 @@ public class PessoaImplementacao implements PessoaInterface {
     @Override
     public void cadastrarPessoa(Pessoa pessoa) {
         pessoaRepository.cadastraPessoaRepositorio(pessoa);
-        System.out.println("======================\u001B[32mProfessor Cadastrado com sucesso!\u001B[0m======================");
+        System.out.println("======================\u001B[32mPessoa Cadastrado com sucesso!\u001B[0m======================");
     }
 
     @Override

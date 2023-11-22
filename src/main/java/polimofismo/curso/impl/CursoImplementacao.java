@@ -5,6 +5,8 @@ import polimofismo.curso.Curso;
 import polimofismo.curso.CursoInterface;
 import polimofismo.curso.repository.CursoRepository;
 import polimofismo.pessoa.Pessoa;
+import polimofismo.pessoa.PessoaInterface;
+import polimofismo.pessoa.impl.PessoaImplementacao;
 
 import java.util.List;
 import java.util.ListIterator;
@@ -12,6 +14,7 @@ import java.util.ListIterator;
 public class CursoImplementacao implements CursoInterface {
 
     CursoRepository cursoRepository = new CursoRepository();
+    static PessoaInterface pessoaInterface = new PessoaImplementacao();
 
     @Override
     public void cadastroDeCurso(Curso curso) {
@@ -55,7 +58,11 @@ public class CursoImplementacao implements CursoInterface {
     public void listarCurso() {
         List<Curso> cursoList = cursoRepository.listarCursosRepositorio();
         for (Curso curso : cursoList) {
-            System.out.println("\u001B[32m\nCódigo: " + curso.getCodigo() + "\nNome: " + curso.getNome() + "\nTotal de alunos: " + curso.getTotalAlunos() + "\nPessoas associadas ao cuso: " + curso.getPessoaList() + "\n\u001B[0m");
+            System.out.println("\u001B[32m\nCódigo: " + curso.getCodigo()
+                    + "\nNome: " + curso.getNome()
+                    + "\nTotal de alunos: " + curso.getTotalAlunos()
+                    + "\nPessoas associadas ao cuso: "
+                    + curso.getPessoaList() + "\n\u001B[0m");
         }
 
     }
@@ -69,5 +76,10 @@ public class CursoImplementacao implements CursoInterface {
             }
         }
         return false;
+    }
+
+    @Override
+    public void vincularPessoasAoCurso(int codigoAluno) {
+
     }
 }

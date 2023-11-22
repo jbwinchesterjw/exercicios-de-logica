@@ -184,7 +184,7 @@ public class Main {
 
     private static void gerenciarCursos() {
         while (opcao != 5) {
-            System.out.println("Gerenciamento de curso\n1 - Cadastrar\n2 - Atualizar\n3 - Excluir\n4 - Listar");
+            System.out.println("Gerenciamento de curso\n1 - Cadastrar\n2 - Atualizar\n3 - Excluir\n4 - Listar\n5 - Vincular aluno ou professor ao curso\n6 - Menu principal");
             opcao = input.nextInt();
             switch (opcao) {
                 case 1:
@@ -200,9 +200,6 @@ public class Main {
                     listarCurso();
                     break;
                 case 5:
-                    vincularPessoasAoCurso();
-                    break;
-                case 6:
                     menuPrincipal();
                     break;
                 default:
@@ -212,9 +209,9 @@ public class Main {
     }
 
     private static void vincularPessoasAoCurso() {
-        while (opcao != 3){
+        while (opcao != 3) {
             System.out.println("O que deseja fazer?\n1 - Vincular aluno ao curso\n2 - vincular professor ao curso");
-            switch (opcao){
+            switch (opcao) {
                 case 1:
                     vincularAluno();
                     break;
@@ -227,19 +224,59 @@ public class Main {
                 default:
                     logger.info("A opção digitada e invalida!");
             }
-            
+
         }
     }
 
     private static void vincularAluno() {
+        vincularPessoasAoCurso();
+        cursoInterface.listarCurso();
+        System.out.println("Informe qual o código do curso que deseja adicionar alunos !");
+        int codigoCurso = input.nextInt();
+
+        Boolean codigoCursoEncontrado = cursoInterface.buscarCursoPorCodigo(codigoCurso);
+        if (codigoCursoEncontrado.equals(Boolean.TRUE)) {
+            System.out.println("Qual o código do aluno deseja adicionar ao curso ?");
+            int codigoAluno = input.nextInt();
+            Boolean pessoaAlunoEncontrado = pessoaInterface.buscarPessoaPorCadigo(codigoAluno);
+            if (pessoaAlunoEncontrado.equals(Boolean.TRUE)) {
+                cursoInterface.vincularPessoasAoCurso(codigoAluno);
+            }
+
+        }
+
+
     }
 
     private static void vincularPreofessor() {
     }
 
     private static void casdastrarCurso() {
-        Curso curso = new Curso("Java", 10, new ArrayList<>());
+        System.out.println("Informe o nome do curso!");
+        String nomeCurso = input.next();
+        System.out.println("Qauntidade de alunos para esse curso ?");
+        int quantidadeAluno = input.nextInt();
+        Curso curso = new Curso(nomeCurso, quantidadeAluno, new ArrayList<>());
         cursoInterface.cadastroDeCurso(curso);
+
+        while (opcao != 3) {
+            System.out.println("Deseja adicionar algum aluno ou porfessor a esse curso ? \n1 - Sim\n2 - Não");
+            opcao = input.nextInt();
+            switch (opcao) {
+                case 1:
+                    vincularAluno();
+
+                    break;
+                case 2:
+                    gerenciarCursos();
+                    break;
+                case 3:
+                    logger.info("A opção digitada invalida!");
+                    break;
+                default:
+            }
+
+        }
     }
 
     private static void atualizarCurso() {
