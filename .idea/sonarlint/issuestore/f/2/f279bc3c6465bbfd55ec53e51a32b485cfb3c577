@@ -1,27 +1,29 @@
 
+
+java:S1192V"bDefine a constant instead of duplicating this literal "AtenÃ§Ã£o digite apenas nÃºmeros!" 5 times.(ù”Á8¿õˆ¦¿1
 ¤
-java:S1186û"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÿ‰çáÿÿÿÿÿ8ƒ¼á¤¿1
-L	java:S106$"+Replace this use of System.out by a logger.(­Ôà”øÿÿÿÿ8ˆ¼á¤¿1
-L	java:S106;"+Replace this use of System.out by a logger.(ë‡£íúÿÿÿÿ8‰¼á¤¿1
-G	java:S106a"+Replace this use of System.out by a logger.(áƒüœ8‹¼á¤¿1
-G	java:S106j"+Replace this use of System.out by a logger.(“·ı’8Œ¼á¤¿1
-L	java:S106o"+Replace this use of System.out by a logger.(€°Ã®øÿÿÿÿ8Œ¼á¤¿1
-F	java:S106u"+Replace this use of System.out by a logger.(Ã¡V8Œ¼á¤¿1
-G	java:S106w"+Replace this use of System.out by a logger.(¯±õ8¼á¤¿1
-F	java:S106}"+Replace this use of System.out by a logger.(¡Ê™8¼á¤¿1
-n	java:S128"LEnd this switch case with an unconditional break, return or throw statement.(ÌÊëÎüÿÿÿÿ8¼á¤¿1
-H	java:S106 "+Replace this use of System.out by a logger.(Ê Õ’8¼á¤¿1
-H	java:S106¥"+Replace this use of System.out by a logger.(¶¢‘8¼á¤¿1
-M	java:S106­"+Replace this use of System.out by a logger.(ªë £ıÿÿÿÿ8¼á¤¿1
-M	java:S106³"+Replace this use of System.out by a logger.(ÉÇ¡’ıÿÿÿÿ8¼á¤¿1
-H	java:S106µ"+Replace this use of System.out by a logger.(áÿí™8‘¼á¤¿1
-H	java:S106»"+Replace this use of System.out by a logger.(Ø‘ 8‘¼á¤¿1
-M	java:S106Õ"+Replace this use of System.out by a logger.(´Ëœúÿÿÿÿ8’¼á¤¿1
-M	java:S106ê"+Replace this use of System.out by a logger.(±¨êøúÿÿÿÿ8“¼á¤¿1
-M	java:S106ï"+Replace this use of System.out by a logger.(éÃí»úÿÿÿÿ8“¼á¤¿1
-M	java:S106ÿ"+Replace this use of System.out by a logger.(ñû‡ûÿÿÿÿ8”¼á¤¿1
-M	java:S106"+Replace this use of System.out by a logger.(ÁÔøåûÿÿÿÿ8”¼á¤¿1
-H	java:S106‡"+Replace this use of System.out by a logger.(Ã·Ì8•¼á¤¿1
-M	java:S106œ"+Replace this use of System.out by a logger.(¿ùÜ¢şÿÿÿÿ8–¼á¤¿1
-M	java:S106¥"+Replace this use of System.out by a logger.(Ê®Í¯ùÿÿÿÿ8—¼á¤¿1
-M	java:S106«"+Replace this use of System.out by a logger.(ëÈôíûÿÿÿÿ8—¼á¤¿1
+java:S1186…"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÿ‰çáÿÿÿÿÿ8âúˆ¦¿1
+L	java:S106$"+Replace this use of System.out by a logger.(­Ôà”øÿÿÿÿ8èúˆ¦¿1
+L	java:S106>"+Replace this use of System.out by a logger.(ë‡£íúÿÿÿÿ8êúˆ¦¿1
+G	java:S106c"+Replace this use of System.out by a logger.(áƒüœ8íúˆ¦¿1
+G	java:S106l"+Replace this use of System.out by a logger.(“·ı’8îúˆ¦¿1
+L	java:S106q"+Replace this use of System.out by a logger.(€°Ã®øÿÿÿÿ8îúˆ¦¿1
+F	java:S106w"+Replace this use of System.out by a logger.(Ã¡V8ïúˆ¦¿1
+G	java:S106y"+Replace this use of System.out by a logger.(¯±õ8ïúˆ¦¿1
+F	java:S106"+Replace this use of System.out by a logger.(¡Ê™8ïúˆ¦¿1
+n	java:S128"LEnd this switch case with an unconditional break, return or throw statement.(ÌÊëÎüÿÿÿÿ8ğúˆ¦¿1
+H	java:S106¢"+Replace this use of System.out by a logger.(Ê Õ’8òúˆ¦¿1
+H	java:S106§"+Replace this use of System.out by a logger.(¶¢‘8óúˆ¦¿1
+M	java:S106¯"+Replace this use of System.out by a logger.(ªë £ıÿÿÿÿ8óúˆ¦¿1
+M	java:S106µ"+Replace this use of System.out by a logger.(ÉÇ¡’ıÿÿÿÿ8ôúˆ¦¿1
+H	java:S106·"+Replace this use of System.out by a logger.(áÿí™8ôúˆ¦¿1
+H	java:S106½"+Replace this use of System.out by a logger.(Ø‘ 8õúˆ¦¿1
+M	java:S106Û"+Replace this use of System.out by a logger.(´Ëœúÿÿÿÿ8öúˆ¦¿1
+M	java:S106ô"+Replace this use of System.out by a logger.(±¨êøúÿÿÿÿ8øúˆ¦¿1
+M	java:S106ù"+Replace this use of System.out by a logger.(éÃí»úÿÿÿÿ8øúˆ¦¿1
+M	java:S106‰"+Replace this use of System.out by a logger.(ñû‡ûÿÿÿÿ8ùúˆ¦¿1
+M	java:S106‹"+Replace this use of System.out by a logger.(ÁÔøåûÿÿÿÿ8úúˆ¦¿1
+H	java:S106‘"+Replace this use of System.out by a logger.(Ã·Ì8ûúˆ¦¿1
+M	java:S106«"+Replace this use of System.out by a logger.(¿ùÜ¢şÿÿÿÿ8üúˆ¦¿1
+M	java:S106´"+Replace this use of System.out by a logger.(Ê®Í¯ùÿÿÿÿ8ıúˆ¦¿1
+M	java:S106º"+Replace this use of System.out by a logger.(ëÈôíûÿÿÿÿ8şúˆ¦¿1
