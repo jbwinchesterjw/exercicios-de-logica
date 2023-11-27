@@ -8,7 +8,7 @@ import java.util.List;
 
 public class PessoaRepository {
 
-    List<Pessoa> listPessoa = new ArrayList<>();
+    public static List<Pessoa> listPessoa = new ArrayList<>();
 
     public void cadastraPessoaRepositorio(Pessoa pessoa){
         listPessoa.add(pessoa);

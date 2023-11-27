@@ -13,9 +13,9 @@ public interface CursoInterface {
 
     void excluirCurso(int codigo);
 
-    void listarCurso();
+    List<Curso> listarCurso();
 
-    Boolean buscarCursoPorCodigo(int codigo);
+    Curso buscarCursoPorCodigo(int codigo);
 
-    void vincularPessoasAoCurso(int codigoAluno);
+    void vincularPessoasAoCurso(Pessoa pessoa, int totalAlunos, int codigo);
 }

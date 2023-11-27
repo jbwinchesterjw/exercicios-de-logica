@@ -12,7 +12,6 @@ import polimofismo.professor.Professor;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ListIterator;
 
 public class PessoaImplementacao implements PessoaInterface {
 
@@ -61,22 +60,22 @@ public class PessoaImplementacao implements PessoaInterface {
     }
 
     @Override
-    public void listarPessoa() {
+    public List<Pessoa> listarPessoa() {
         List<Pessoa> pessoaList = pessoaRepository.listarPessoaRepositorio();
 
         for (Pessoa pessoa : pessoaList) {
-            System.out.println("\nAluno\n" +
-                    "Código: " + ((Aluno) pessoa).getCodigo() +
+            System.out.println("\n" +
+                    (pessoa instanceof Aluno ? "Aluno" : "Professor") + "\n" +
+                    "Código: " + pessoa.getCodigo() +
                     "\nNome: " + pessoa.getNome() +
                     "\nE-mail: " + pessoa.getEmail() +
                     "\nData Nascimento: " + pessoa.getDatanascimento() +
                     "\nEndereço: " + pessoa.getEndereco());
-
-            pessoaList.add(pessoa);
         }
+        return pessoaList;
     }
 
-    public List<Pessoa> listarAlunos() {
+    public void listarAlunos() {
         List<Pessoa> pessoaList = pessoaRepository.listarPessoaRepositorio();
         List<Pessoa> alunoList = new ArrayList<>();
 
@@ -89,16 +88,13 @@ public class PessoaImplementacao implements PessoaInterface {
                         "\nData Nascimento: " + pessoa.getDatanascimento() +
                         "\nEndereço: " + pessoa.getEndereco());
 
-                alunoList.add(pessoa);
             }
-        }
 
-        return alunoList;
+        }
     }
 
-    public List<Pessoa> listarProfessores() {
+    public void listarProfessores() {
         List<Pessoa> pessoaList = pessoaRepository.listarPessoaRepositorio();
-        List<Pessoa> professorList = new ArrayList<>();
 
         for (Pessoa pessoa : pessoaList) {
             if (pessoa instanceof Professor) {
@@ -108,23 +104,21 @@ public class PessoaImplementacao implements PessoaInterface {
                         "\nE-mail: " + pessoa.getEmail() +
                         "\nData Nascimento: " + pessoa.getDatanascimento() +
                         "\nEndereço: " + pessoa.getEndereco());
-
-                professorList.add(pessoa);
+                pessoaList.add(pessoa);
             }
         }
 
-        return professorList;
     }
 
     @Override
-    public Boolean buscarPessoaPorCadigo(int codigo) {
+    public Pessoa buscarPessoaPorCadigo(int codigo) {
         List<Pessoa> pessoaList = pessoaRepository.listarPessoaRepositorio();
         for (Pessoa pessoa : pessoaList) {
             if (pessoa.getCodigo() == codigo) {
-                return true;
+                return pessoa;
             }
         }
-        return false;
+        return null;
     }
 
     public void verificarEmail(String email) {

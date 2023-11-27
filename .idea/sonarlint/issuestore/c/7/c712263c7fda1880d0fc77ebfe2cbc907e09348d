@@ -1,26 +1,28 @@
 
 j
 java:S1192F"HDefine a constant instead of duplicating this literal "
-Nome: " 3 times.(ë‡¾ÿÿÿÿÿ8ëå¢¿1
+Nome: " 3 times.(ë‡¾ÿÿÿÿÿ8õ¸óñ¿1
 g
 java:S1192G"JDefine a constant instead of duplicating this literal "
-E-mail: " 3 times.(·ªıƒ8êå¢¿1
+E-mail: " 3 times.(·ªıƒ8ö¸óñ¿1
 l
-java:S1192E"JDefine a constant instead of duplicating this literal "CÃ³digo: " 3 times.(•Æéöûÿÿÿÿ8ëå¢¿1
+java:S1192E"JDefine a constant instead of duplicating this literal "CÃ³digo: " 3 times.(àÕµ·ûÿÿÿÿ8ö¸óñ¿1
 p
 java:S1192H"SDefine a constant instead of duplicating this literal "
-Data Nascimento: " 3 times.(ó©ãŸ8ëå¢¿1
+Data Nascimento: " 3 times.(ó©ãŸ8ö¸óñ¿1
 j
 java:S1192I"MDefine a constant instead of duplicating this literal "
-EndereÃ§o: " 3 times.(å¸ÃŠ8ëå¢¿1
-L	java:S106"+Replace this use of System.out by a logger.(ëéƒÁûÿÿÿÿ8ûå¢¿1
-G	java:S106&"+Replace this use of System.out by a logger.(À£ÀØ8üå¢¿1
-L	java:S106+"+Replace this use of System.out by a logger.(¹êÇ şÿÿÿÿ8üå¢¿1
-G	java:S1069"+Replace this use of System.out by a logger.(ÙŠ¶‘8şå¢¿1
-L	java:S106;"+Replace this use of System.out by a logger.(ßÜÆ´ıÿÿÿÿ8şå¢¿1
-G	java:S106D"+Replace this use of System.out by a logger.(ß’úÌ8şå¢¿1
-G	java:S106U"+Replace this use of System.out by a logger.(ß’úÌ8€æ¢¿1
-G	java:S106i"+Replace this use of System.out by a logger.(ÉÛê8æ¢¿1
-H	java:S106†"+Replace this use of System.out by a logger.(«Îõõ8ƒæ¢¿1
-U
-java:S1128"3Remove this unused import 'java.util.ListIterator'.(õ¥æÊşÿÿÿÿ8ƒæ¢¿1
+EndereÃ§o: " 3 times.(å¸ÃŠ8ö¸óñ¿1
+L	java:S106"+Replace this use of System.out by a logger.(ëéƒÁûÿÿÿÿ8¹˜¿¾¿1
+G	java:S106%"+Replace this use of System.out by a logger.(À£ÀØ8º˜¿¾¿1
+L	java:S106*"+Replace this use of System.out by a logger.(¹êÇ şÿÿÿÿ8º˜¿¾¿1
+G	java:S1068"+Replace this use of System.out by a logger.(ÙŠ¶‘8¼˜¿¾¿1
+L	java:S106:"+Replace this use of System.out by a logger.(ßÜÆ´ıÿÿÿÿ8¼˜¿¾¿1
+G	java:S106C"+Replace this use of System.out by a logger.(§ş¢8¾˜¿¾¿1
+_
+java:S1854P"=Remove this useless assignment to local variable "alunoList".(íöòŒÿÿÿÿÿ8½˜¿¾¿1
+P
+java:S1481P".Remove this unused "alunoList" local variable.(íöòŒÿÿÿÿÿ8¾˜¿¾¿1
+G	java:S106T"+Replace this use of System.out by a logger.(ß’úÌ8¿˜¿¾¿1
+G	java:S106e"+Replace this use of System.out by a logger.(ÉÛê8Á˜¿¾¿1
+H	java:S106€"+Replace this use of System.out by a logger.(«Îõõ8¡¹óñ¿1

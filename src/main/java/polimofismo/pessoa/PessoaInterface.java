@@ -11,13 +11,13 @@ public interface PessoaInterface {
 
     void excluirPessoa(int codigo);
 
-    void listarPessoa();
+    List<Pessoa> listarPessoa();
 
-    Boolean buscarPessoaPorCadigo(int codigo);
+    Pessoa buscarPessoaPorCadigo(int codigo);
 
-    List<Pessoa> listarProfessores();
+    void listarProfessores();
 
-    List<Pessoa> listarAlunos();
+    void listarAlunos();
 
     void verificarEmail(String email);
 }
