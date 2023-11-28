@@ -25,7 +25,7 @@ public class CursoRepository {
         pessoaList.add(aluno);
     }
 
-    public List<Pessoa> listarPessoasAssociadasAoCurso() {
+    public List<Pessoa> listarPessoasAssociadasAoCurso(int codigo) {
         return pessoaList.stream().collect(Collectors.toList());
     }
 }

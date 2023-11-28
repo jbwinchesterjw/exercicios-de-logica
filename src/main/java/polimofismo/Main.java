@@ -95,8 +95,10 @@ public class Main {
 
     public static void cadastroDeAlunos() {
         Pessoa alunoPessoa = new Aluno("Joao", "Joao@", LocalDate.now());
+        Pessoa alunoPessoa1 = new Aluno("Joao", "Jb@", LocalDate.now().minusMonths(10));
         pessoaInterface.verificarEmail(alunoPessoa.getEmail());
         pessoaInterface.cadastrarPessoa(alunoPessoa);
+        pessoaInterface.cadastrarPessoa(alunoPessoa1);
     }
 
     public static void atualizarAluno() {
@@ -206,7 +208,7 @@ public class Main {
                         excluirCurso();
                         break;
                     case 4:
-                        listarCurso();
+                        cursoInterface.listarCurso();
                         break;
                     case 5:
                         vincularPessoasAoCurso();
@@ -251,13 +253,12 @@ public class Main {
 
 
     private static void vincularAluno() {
-        List<Curso> cursoList = cursoInterface.listarCurso();
         System.out.println("Todos os nossos cursos cadastrados ! ");
-        System.out.println(cursoList);
+        cursoInterface.listarCurso();
         System.out.println("Informe o código do curso que deseja adicionar alunos:");
         int codigoCurso = input.nextInt();
         System.out.println("Todos os nossos alunos cadastrado ! ");
-        pessoaInterface.listarPessoa();
+        pessoaInterface.listarAlunos();
         Curso cursoEncontrado = cursoInterface.buscarCursoPorCodigo(codigoCurso);
         if (cursoEncontrado != null) {
             System.out.println("Informe o código do aluno que deseja adicionar ao curso de: " + cursoEncontrado.getNome());
@@ -355,13 +356,6 @@ public class Main {
         int codigo = input.nextInt();
         cursoInterface.excluirCurso(codigo);
     }
-
-    private static void listarCurso() {
-        System.out.println("Todos os nossos cursos cadastrados !");
-        List<Curso> cursoList = cursoInterface.listarCurso();
-        System.out.println(cursoList);
-    }
-
 
 }
 
