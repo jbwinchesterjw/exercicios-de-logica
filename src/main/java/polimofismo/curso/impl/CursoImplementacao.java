@@ -54,24 +54,32 @@ public class CursoImplementacao implements CursoInterface {
     }
 
     @Override
-    public List<Curso> listarCurso() {
+    public void listarCurso() {
         List<Curso> cursoList = cursoRepository.listarCursosRepositorio();
 
         for (Curso curso : cursoList) {
             System.out.println("\u001B[32m\nCódigo: " + curso.getCodigo()
-                    + "\nNome: " + curso.getNome()
+                    + "\nNome do curso: " + curso.getNome()
                     + "\nTotal de alunos: " + curso.getTotalAlunos()
                     + "\nPessoas associadas ao curso: ");
 
-            List<Pessoa> pessoaCursoList = listarPessoaDoCurso();
+            List<Pessoa> pessoaCursoList = listarPessoaDoCurso(curso.getCodigo());
             for (Pessoa pessoa : pessoaCursoList) {
-                System.out.println("\t- " + pessoa.getNome());
+                System.out.println("\tCódigo: "+pessoa.getCodigo()+"\tNome: " + pessoa.getNome());
             }
 
             System.out.println("\n\u001B[0m");
         }
+    }
+    public List<Pessoa> listarPessoaDoCurso(int codigoCurso) {
+        List<Pessoa> pessoasAssociadas = new ArrayList<>();
+        List<Pessoa> pessoaList = cursoRepository.listarPessoasAssociadasAoCurso(codigoCurso);
 
-        return cursoList;
+        for (Pessoa pessoa : pessoaList) {
+            pessoasAssociadas.add(pessoa);
+        }
+
+        return pessoasAssociadas;
     }
 
 
@@ -86,21 +94,12 @@ public class CursoImplementacao implements CursoInterface {
         return null;
     }
 
-    public List<Pessoa> listarPessoaDoCurso() {
-        List<Pessoa> pessoasAssociadas = new ArrayList<>();
-        List<Pessoa> pessoaList = cursoRepository.listarPessoasAssociadasAoCurso();
 
-        for (Pessoa pessoa : pessoaList) {
-            pessoasAssociadas.add(pessoa);
-        }
-
-        return pessoasAssociadas;
-    }
 
     @Override
     public void vincularPessoasAoCurso(Pessoa pessoa, int totalAlunos, int codigo) {
         List<Pessoa> listPessoa = PessoaRepository.listPessoa;
-        List<Pessoa> pessoaList = cursoRepository.listarPessoasAssociadasAoCurso();
+        List<Pessoa> pessoaList = cursoRepository.listarPessoasAssociadasAoCurso(codigo);
 
         if (listPessoa.contains(pessoa)) {
             if (!pessoaList.contains(pessoa)) {

@@ -13,7 +13,7 @@ public interface CursoInterface {
 
     void excluirCurso(int codigo);
 
-    List<Curso> listarCurso();
+    void listarCurso();
 
     Curso buscarCursoPorCodigo(int codigo);
 
