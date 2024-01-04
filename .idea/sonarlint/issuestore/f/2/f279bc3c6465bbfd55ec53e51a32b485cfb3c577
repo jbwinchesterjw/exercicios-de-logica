@@ -1,8 +1,6 @@
 
-Ÿ
-java:S1186š"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«ŸÏí8ÙÁ¹Á1
 …
-java:S4144¾"gUpdate this method so that its implementation is not identical to "vincularPessoasAoCurso" on line 228.(¨Úş›8ÚÁ¹Á1
+java:S4144Ò"gUpdate this method so that its implementation is not identical to "vincularPessoasAoCurso" on line 228.(¨Úş›8ÚÁ¹Á1
 L	java:S106&"+Replace this use of System.out by a logger.(­Ôà”øÿÿÿÿ8÷¨‡¹Á1
 L	java:S106C"+Replace this use of System.out by a logger.(ë‡£íúÿÿÿÿ8ù¨‡¹Á1
 G	java:S106j"+Replace this use of System.out by a logger.(áƒüœ8çÁ¹Á1
@@ -22,11 +20,15 @@ H	java:S106„"+Replace this use of System.out by a logger.(Ö«üï8Á¹Á1
 M	java:S106ˆ"+Replace this use of System.out by a logger.(úÂÁéşÿÿÿÿ8Á¹Á1
 M	java:S106“"+Replace this use of System.out by a logger.(‰éßıÿÿÿÿ8Á¹Á1
 H	java:S106–"+Replace this use of System.out by a logger.(›¼á¡8Á¹Á1
-M	java:S106Ÿ"+Replace this use of System.out by a logger.(ñû‡ûÿÿÿÿ8Á¹Á1
-M	java:S106¡"+Replace this use of System.out by a logger.(ÁÔøåûÿÿÿÿ8‘Á¹Á1
-H	java:S106§"+Replace this use of System.out by a logger.(Ã·Ì8’Á¹Á1
-H	java:S106Á"+Replace this use of System.out by a logger.(ûµİ”8“Á¹Á1
-M	java:S106Ú"+Replace this use of System.out by a logger.(¿ùÜ¢şÿÿÿÿ8–Á¹Á1
-M	java:S106ã"+Replace this use of System.out by a logger.(Ê®Í¯ùÿÿÿÿ8—Á¹Á1
+H	java:S106›"+Replace this use of System.out by a logger.(ÏÙñÃ8’Á¹Á1
+M	java:S106"+Replace this use of System.out by a logger.(ÅÌ“ûÿÿÿÿ8“Á¹Á1
+G	java:S106Ÿ"+Replace this use of System.out by a logger.(¿ƒÚ78–Á¹Á1
+M	java:S106£"+Replace this use of System.out by a logger.(†î±–ûÿÿÿÿ8—Á¹Á1
+G	java:S106®"+Replace this use of System.out by a logger.(”è¨8Š´óâÌ1
+H	java:S106±"+Replace this use of System.out by a logger.(›¼á¡8Š´óâÌ1
+H	java:S106»"+Replace this use of System.out by a logger.(Ã·Ì8´óâÌ1
+H	java:S106Õ"+Replace this use of System.out by a logger.(ûµİ”8´óâÌ1
+M	java:S106î"+Replace this use of System.out by a logger.(¿ùÜ¢şÿÿÿÿ8´óâÌ1
+M	java:S106÷"+Replace this use of System.out by a logger.(Ê®Í¯ùÿÿÿÿ8‘´óâÌ1
 M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8—Á¹Á1
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8¢óŠãÌ1

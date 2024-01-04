@@ -1,11 +1,13 @@
 package polimofismo.curso.impl;
 
 
+import polimofismo.aluno.Aluno;
 import polimofismo.curso.Curso;
 import polimofismo.curso.CursoInterface;
 import polimofismo.curso.repository.CursoRepository;
 import polimofismo.pessoa.Pessoa;
 import polimofismo.pessoa.repository.PessoaRepository;
+import polimofismo.professor.Professor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,7 +67,16 @@ public class CursoImplementacao implements CursoInterface {
 
             List<Pessoa> pessoaCursoList = listarPessoaDoCurso(curso.getCodigo());
             for (Pessoa pessoa : pessoaCursoList) {
-                System.out.println("\tCódigo: "+pessoa.getCodigo()+"\tNome: " + pessoa.getNome());
+                String tipoPessoa = "Desconhecido";
+
+                // Verificar o tipo de pessoa (pode variar dependendo da sua implementação)
+                if (pessoa instanceof Aluno) {
+                    tipoPessoa = "Aluno";
+                } else if (pessoa instanceof Professor) {
+                    tipoPessoa = "Professor";
+                }
+
+                System.out.println("\tCódigo: " + pessoa.getCodigo() + "\tNome: " + pessoa.getNome() + "\tTipo: " + tipoPessoa);
             }
 
             System.out.println("\n\u001B[0m");
