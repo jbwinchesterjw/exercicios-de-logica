@@ -19,10 +19,9 @@ L	java:S106*"+Replace this use of System.out by a logger.(¹êÇ şÿÿÿÿ8º˜¿¾¿1
 G	java:S1068"+Replace this use of System.out by a logger.(ÙŠ¶‘8¼˜¿¾¿1
 L	java:S106:"+Replace this use of System.out by a logger.(ßÜÆ´ıÿÿÿÿ8¼˜¿¾¿1
 G	java:S106C"+Replace this use of System.out by a logger.(§ş¢8¾˜¿¾¿1
-_
-java:S1854P"=Remove this useless assignment to local variable "alunoList".(íöòŒÿÿÿÿÿ8½˜¿¾¿1
-P
-java:S1481P".Remove this unused "alunoList" local variable.(íöòŒÿÿÿÿÿ8¾˜¿¾¿1
+]	java:S125P"<This block of commented-out lines of code should be removed.(Ã„—òúÿÿÿÿ8¹©ÉâÌ1
 G	java:S106T"+Replace this use of System.out by a logger.(ß’úÌ8¿˜¿¾¿1
 G	java:S106e"+Replace this use of System.out by a logger.(ÉÛê8Á˜¿¾¿1
-H	java:S106€"+Replace this use of System.out by a logger.(«Îõõ8¡¹óñ¿1
+G	java:S106"+Replace this use of System.out by a logger.(«Îõõ8¡¹óñ¿1
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¾©ÉâÌ1

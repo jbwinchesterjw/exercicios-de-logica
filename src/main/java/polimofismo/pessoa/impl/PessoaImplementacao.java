@@ -77,7 +77,7 @@ public class PessoaImplementacao implements PessoaInterface {
 
     public void listarAlunos() {
         List<Pessoa> pessoaList = pessoaRepository.listarPessoaRepositorio();
-        List<Pessoa> alunoList = new ArrayList<>();
+        //List<Pessoa> alunoList = new ArrayList<>();
 
         for (Pessoa pessoa : pessoaList) {
             if (pessoa instanceof Aluno) {
@@ -104,7 +104,6 @@ public class PessoaImplementacao implements PessoaInterface {
                         "\nE-mail: " + pessoa.getEmail() +
                         "\nData Nascimento: " + pessoa.getDatanascimento() +
                         "\nEndereço: " + pessoa.getEndereco());
-                pessoaList.add(pessoa);
             }
         }
 

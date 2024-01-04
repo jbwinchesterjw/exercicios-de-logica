@@ -63,3 +63,5 @@ J
 ExerciciosDeLogicaJava.iml,d\0\d0d56e9e32efe6711b5c2830fbd10b60944065ac
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+R
+"src/main/java/NumerosMegaSena.java,0\2\02b12a69d5f76d5a1e739c81a7516d93e7a920a7

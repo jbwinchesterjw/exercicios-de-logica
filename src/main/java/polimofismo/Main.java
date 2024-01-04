@@ -280,15 +280,35 @@ public class Main {
     }
 
     private static void vincularProfessor() {
+        System.out.println("Todos os nossos cursos cadastrados ! ");
+        cursoInterface.listarCurso();
+        System.out.println("Informe o código do curso que deseja adicionar alunos:");
+        int codigoCurso = input.nextInt();
+        System.out.println("Todos os nossos professores cadastrados ! ");
+        pessoaInterface.listarProfessores();
+        Curso cursoEncontrado = cursoInterface.buscarCursoPorCodigo(codigoCurso);
+        if (cursoEncontrado != null) {
+            System.out.println("Informe o código do professor que deseja adicionar ao curso de: " + cursoEncontrado.getNome());
+            int codigoAluno = input.nextInt();
+
+            Pessoa professor = pessoaInterface.buscarPessoaPorCadigo(codigoAluno);
+            if (professor instanceof Professor) {
+                Curso curso = cursoInterface.buscarCursoPorCodigo(codigoCurso);
+                if (curso != null) {
+                    cursoInterface.vincularPessoasAoCurso(professor, curso.getTotalAlunos(), curso.getCodigo());
+                }
+
+            } else {
+                System.out.println("Professor não encontrado ou não é um professor válido.");
+            }
+        } else {
+            System.out.println("Curso não encontrado.");
+        }
     }
 
     private static void casdastrarCurso() {
         int opcao = 0;
-        System.out.println("Informe o nome do curso!");
-        String nomeCurso = input.next();
-        System.out.println("Qauntidade de alunos para esse curso ?");
-        int quantidadeAluno = input.nextInt();
-        Curso curso = new Curso(nomeCurso, quantidadeAluno, new ArrayList<>());
+        Curso curso = new Curso("Java", 10, new ArrayList<>());
         cursoInterface.cadastroDeCurso(curso);
 
         while (opcao != 3) {
