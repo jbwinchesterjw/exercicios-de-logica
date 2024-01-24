@@ -11,10 +11,9 @@ import polimofismo.pessoa.impl.PessoaImplementacao;
 import polimofismo.professor.Professor;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.*;
 import java.util.logging.Logger;
 
 public class Main {
@@ -161,12 +160,14 @@ public class Main {
 
     private static void castrarProfessor() {
         Pessoa professor = new Professor("Professor zica", "zica@", LocalDate.now());
+        Pessoa professor1 = new Professor("Professor gente boa", "nice@", LocalDate.now());
         pessoaInterface.cadastrarPessoa(professor);
+        pessoaInterface.cadastrarPessoa(professor1);
     }
 
     private static void atualizarProfessor() {
         listarProfessor();
-        Pessoa professor = new Professor("Professor gente boa", "genteboa@", LocalDate.now().minusMonths(7));
+        Pessoa professor = new Professor("Professor gente boa2", "genteboa2@", LocalDate.now().minusMonths(7));
         System.out.println("Informe o codigo do professor que deseja atualizar!");
         int codigo = input.nextInt();
         Pessoa professorEncontrado = pessoaInterface.buscarPessoaPorCadigo(codigo);
@@ -254,23 +255,30 @@ public class Main {
 
     private static void vincularAluno() {
         System.out.println("Todos os nossos cursos cadastrados ! ");
-        cursoInterface.listarCurso();
+        List<Curso> cursoList = cursoInterface.listarCurso();
         System.out.println("Informe o código do curso que deseja adicionar alunos:");
         int codigoCurso = input.nextInt();
-        System.out.println("Todos os nossos alunos cadastrado ! ");
-        pessoaInterface.listarAlunos();
-        Curso cursoEncontrado = cursoInterface.buscarCursoPorCodigo(codigoCurso);
+
+        // Verificar se o código do curso é válido
+        Curso cursoEncontrado = null;
+        for (Curso curso : cursoList) {
+            if (curso.getCodigo() == codigoCurso) {
+                cursoEncontrado = curso;
+                break;
+            }
+        }
+
         if (cursoEncontrado != null) {
+            System.out.println("Todos os nossos alunos cadastrados ! ");
+            pessoaInterface.listarAlunos();
+
             System.out.println("Informe o código do aluno que deseja adicionar ao curso de: " + cursoEncontrado.getNome());
             int codigoAluno = input.nextInt();
 
             Pessoa aluno = pessoaInterface.buscarPessoaPorCadigo(codigoAluno);
             if (aluno instanceof Aluno) {
-                Curso curso = cursoInterface.buscarCursoPorCodigo(codigoCurso);
-                if (curso != null) {
-                    cursoInterface.vincularPessoasAoCurso(aluno, curso.getTotalAlunos(), curso.getCodigo());
-                }
-
+                cursoInterface.vincularPessoasAoCurso(aluno, cursoEncontrado.getTotalAlunos(), cursoEncontrado.getCodigo());
+                System.out.println("Aluno vinculado ao curso com sucesso!");
             } else {
                 System.out.println("Aluno não encontrado ou não é um aluno válido.");
             }
@@ -308,8 +316,14 @@ public class Main {
 
     private static void casdastrarCurso() {
         int opcao = 0;
-        Curso curso = new Curso("Java", 10, new ArrayList<>());
+        LocalTime horarioInicio = LocalTime.of(7, 30);
+        LocalTime horarioFinal = LocalTime.of(11, 30);
+        LocalTime horarioInicio1 = LocalTime.of(8, 30);
+        LocalTime horarioFinal1 = LocalTime.of(12, 00);
+        Curso curso = new Curso("Java", 10, new ArrayList<>(), horarioInicio, horarioFinal);
+        Curso curso1 = new Curso("Flutter", 10, new ArrayList<>(), horarioInicio1, horarioFinal1);
         cursoInterface.cadastroDeCurso(curso);
+        cursoInterface.cadastroDeCurso(curso1);
 
         while (opcao != 3) {
             System.out.println("Deseja adicionar algum aluno ou porfessor a esse curso ? \n1 - Sim\n2 - Não");
@@ -362,7 +376,9 @@ public class Main {
     }
 
     private static void atualizarCurso() {
-        Curso curso = new Curso("Angular", 15, new ArrayList<>());
+        LocalTime horarioInicio = LocalTime.of(8, 00);
+        LocalTime horarioFinal = LocalTime.of(12, 00);
+        Curso curso = new Curso("Angular", 15, new ArrayList<>(), horarioInicio, horarioFinal);
         System.out.println("Informe qual código do curso deseja atualizar!");
         int codigo = input.nextInt();
         Curso cursoEcontraso = cursoInterface.buscarCursoPorCodigo(codigo);

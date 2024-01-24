@@ -3,6 +3,8 @@ package polimofismo.curso;
 
 import polimofismo.pessoa.Pessoa;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 public class Curso {
@@ -11,12 +13,16 @@ public class Curso {
     private String nome;
     private int totalAlunos;
     private List<Pessoa> pessoaList;
+    private LocalTime horarioInicio;
+    private LocalTime horarioFinal;
 
-    public Curso(String nome, int totalAlunos, List<Pessoa> pessoaList) {
+    public Curso(String nome, int totalAlunos, List<Pessoa> pessoaList, LocalTime horarioInicio, LocalTime horarioFinal) {
         this.codigo = codigoGerado++;
         this.nome = nome;
         this.totalAlunos = totalAlunos;
         this.pessoaList = pessoaList;
+        this.horarioInicio = horarioInicio;
+        this.horarioFinal = horarioFinal;
     }
 
     public int getCodigo() {
@@ -57,6 +63,22 @@ public class Curso {
 
     public void setPessoaList(List<Pessoa> pessoaList) {
         this.pessoaList = pessoaList;
+    }
+
+    public LocalTime getHorarioInicio() {
+        return horarioInicio;
+    }
+
+    public void setHorarioInicio(LocalTime horarioInicio) {
+        this.horarioInicio = horarioInicio;
+    }
+
+    public LocalTime getHorarioFinal() {
+        return horarioFinal;
+    }
+
+    public void setHorarioFinal(LocalTime horarioFinal) {
+        this.horarioFinal = horarioFinal;
     }
 
 }

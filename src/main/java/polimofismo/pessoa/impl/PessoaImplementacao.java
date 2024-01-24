@@ -77,7 +77,6 @@ public class PessoaImplementacao implements PessoaInterface {
 
     public void listarAlunos() {
         List<Pessoa> pessoaList = pessoaRepository.listarPessoaRepositorio();
-        //List<Pessoa> alunoList = new ArrayList<>();
 
         for (Pessoa pessoa : pessoaList) {
             if (pessoa instanceof Aluno) {
