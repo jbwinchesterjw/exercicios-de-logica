@@ -26,6 +26,6 @@ public class CursoRepository {
     }
 
     public List<Pessoa> listarPessoasAssociadasAoCurso(int codigo) {
-        return pessoaList.stream().collect(Collectors.toList());
+        return pessoaList.stream().filter(pessoa -> pessoa.getCodigo() == codigo).collect(Collectors.toList());
     }
 }

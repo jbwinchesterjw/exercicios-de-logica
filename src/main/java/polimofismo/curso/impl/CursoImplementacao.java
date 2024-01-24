@@ -56,13 +56,15 @@ public class CursoImplementacao implements CursoInterface {
     }
 
     @Override
-    public void listarCurso() {
+    public List<Curso> listarCurso() {
         List<Curso> cursoList = cursoRepository.listarCursosRepositorio();
 
         for (Curso curso : cursoList) {
             System.out.println("\u001B[32m\nCódigo: " + curso.getCodigo()
                     + "\nNome do curso: " + curso.getNome()
                     + "\nTotal de alunos: " + curso.getTotalAlunos()
+                    + "\nHorario de inicio: " + curso.getHorarioInicio()
+                    + "\nHorario de encerramento: " + curso.getHorarioFinal()
                     + "\nPessoas associadas ao curso: ");
 
             List<Pessoa> pessoaCursoList = listarPessoaDoCurso(curso.getCodigo());
@@ -81,7 +83,9 @@ public class CursoImplementacao implements CursoInterface {
 
             System.out.println("\n\u001B[0m");
         }
+        return cursoList;
     }
+
     public List<Pessoa> listarPessoaDoCurso(int codigoCurso) {
         List<Pessoa> pessoasAssociadas = new ArrayList<>();
         List<Pessoa> pessoaList = cursoRepository.listarPessoasAssociadasAoCurso(codigoCurso);
@@ -104,8 +108,6 @@ public class CursoImplementacao implements CursoInterface {
         }
         return null;
     }
-
-
 
     @Override
     public void vincularPessoasAoCurso(Pessoa pessoa, int totalAlunos, int codigo) {
