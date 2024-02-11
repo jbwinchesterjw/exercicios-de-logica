@@ -1,10 +1,9 @@
-import java.text.MessageFormat;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Calculadora {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         String opercao;
         System.out.println("informe a operação + * / - ");
         opercao = scanner.nextLine();

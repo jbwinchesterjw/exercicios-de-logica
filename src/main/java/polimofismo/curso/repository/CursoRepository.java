@@ -10,8 +10,8 @@ import java.util.stream.Collectors;
 
 public class CursoRepository {
 
-    List<Curso> cursoList = new ArrayList<>();
-    List<Pessoa> pessoaList = new ArrayList<>();
+    public static List<Curso> cursoList = new ArrayList<>();
+    public static List<Pessoa> pessoaList = new ArrayList<>();
 
     public void cadastroCurso(Curso curso) {
         cursoList.add(curso);
